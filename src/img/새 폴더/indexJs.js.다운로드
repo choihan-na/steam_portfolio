@@ -1,0 +1,61 @@
+﻿$(function() {
+
+    // slide 이전 다음 버튼
+    var viewImg = $('.view img');
+    var cnt = 0;
+    $('.prev img').click(function() {
+        if (cnt > 0) {
+            cnt--;
+        } else {
+            cnt = 2;
+        }
+        btnShow(cnt);
+        //$('.slide li').eq(cnt).fadeIn().siblings().fadeOut();
+    });
+
+    $('.next').click(function() {
+        if (cnt < 2) {
+            cnt++;
+        } else {
+            cnt = 0;
+        }
+        btnShow(cnt);
+        //$('.slide li').eq(cnt).fadeIn().siblings().fadeOut();
+
+    });
+
+    function btnShow(c) {
+        $('.slide li').eq(c).fadeIn().siblings().fadeOut();
+    }
+
+    // 자동 슬라이드
+    function slideFadeShow() {
+        if (cnt < 2) {
+            cnt++;
+        } else {
+            cnt = 0;
+        }
+        $('.slide li').eq(cnt).stop().fadeIn().siblings().stop().fadeOut();
+    }
+
+    var show = setInterval(slideFadeShow, 3000);
+
+    //슬라이드 서브 이미지를 호버하면 메인 화면에 뜨기
+    $('.slide li').mouseenter(function() {
+        clearInterval(show);
+        var vImg = $(this).find('.view img').attr('src');
+        var thumb = $(this).find('.thumbnail img')
+        var view = $(this).find('.view img');
+        var thumbDiv = $(this).find('.thumbnail')
+
+        thumb.mouseover(function() {
+            var thumbImg = $(this).attr('src');
+            view.attr('src', thumbImg)
+        })
+        thumbDiv.mouseout(function() {
+            view.attr('src', vImg)
+        })
+    }).mouseleave(function() {
+        show = setInterval(slideFadeShow, 3000);
+    })
+}); //ready

@@ -1,0 +1,455 @@
+﻿@charset "utf-8";
+
+/* 메인 2a2a2a  서브 eeeeef */
+#wrap {
+    width: 100%;
+}
+
+/* header */
+.header {
+    width: 100%;
+    background: #2a2a2a;
+    float: left;
+    height: 50px
+}
+
+.header h1 {
+    float: left;
+    width: 160px;
+    height: 40px;
+}
+
+.header h1 img {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.global_header {
+    width: 1200px;
+    margin: auto;
+}
+
+.global_left {
+    float: left;
+    width: 50%;
+}
+
+.global_left li {
+    float: left;
+    line-height: 50px;
+}
+
+.global_left li a {
+    color: #dbdcdc;
+    padding-right: 10px;
+}
+
+.global_right {
+    float: right;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.global_right li {
+    line-height: 50px;
+    float: left;
+}
+
+.global_right li a {
+    color: #dbdcdc;
+    padding: 0 5px;
+}
+
+.global_right li:first-child a {
+    background: #fff;
+    color: #2a2a2a;
+    padding: 5px 10px;
+}
+
+.global_left li:hover a {
+    color: #fff;
+    transition: all 0.7s
+}
+
+.global_right li:nth-child(even):hover a {
+    color: #fff;
+    transition: all 0.7s
+}
+
+.store_nav {
+    width: 1200px;
+    margin: auto;
+    height: 200px;
+
+}
+
+.gnb {
+    width: 100%;
+    float: left;
+}
+
+.gnb>ul>li {
+    float: left;
+    width: 150px;
+}
+
+.gnb>ul>li>span {
+    width: 100%;
+    margin-top: 75px;
+    text-transform: capitalize;
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+    text-indent: 5px;
+    cursor: pointer;
+    padding: 5px 0;
+    transition: all 0.2s;
+}
+
+.gnb>ul {
+    float: left;
+    width: 100%;
+}
+
+.gnb>ul>li:last-child {
+    text-align: right;
+    float: right;
+    width: 301px;
+    border-bottom: 3px solid #2a2a2a;
+    padding-bottom: 5px;
+}
+
+.gnb>ul>li>input {
+    margin-top: 75px;
+    background: url(../img/icon/search_btn.jpg) no-repeat right center/contain;
+    height: 26px;
+    width: 299px;
+    border: none;
+
+}
+.gnb>ul>li:hover .sub {display:block;}
+
+.sub {
+    background: #2a2a2a;
+    width: 150px;
+    margin-top: 5px;
+    position: absolute;
+    display: none;
+    z-index: 99;
+}
+
+.sub li {
+    transition: all 0.5s;
+}
+
+.sub li a {
+    color: #fff;
+    display: block;
+    text-indent: 5px;
+    text-transform: capitalize;
+    padding: 5px 0;
+}
+
+.gnb>ul>li span:hover {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.sub li:hover {
+    background: #207298
+}
+
+/* slideSection */
+
+.slideSection {
+    clear: both;
+    width: 100%;
+    padding-top: 50px;
+    position: relative;
+}
+
+.slideWrap {
+    width: 1200px;
+    margin: auto;
+    height: 350px;
+    position: relative;
+    z-index: 1;
+    overflow:hidden;
+}
+
+.slide {
+    width: 3600px;
+    position: relative;
+}
+
+.slide li {
+    width: 1200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 350px;
+}
+
+.slide li:not(:first-child) {
+    display: none;
+}
+
+.slide li .view {
+    width: 800px;
+    height: 100%;
+    float: left;
+}
+
+.slide li .view>img {
+    width: 800px;
+    height: 100%;
+}
+
+.slide li .thumb {
+    width: 380px;
+    background: #eeeeef;
+    color: #2a2a2a;
+    float: left;
+    padding: 10px;
+    height: calc(100% - 20px);
+}
+
+.thumb h2 {
+    padding: 5px 0;
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.thumbnail img {
+    width: 49%;
+    cursor: pointer;
+    filter: brightness(70%);
+    transition: all 0.3s ease;
+}
+
+.thumbTxt {
+    margin-top: 10px;
+    position: relative;
+}
+
+.thumLeft {
+    width: 50%;
+}
+
+.thumLeft span {
+    font-size: 16px;
+    display: block;
+}
+
+.thumRight {
+    background: #2a2a2a url(../img/icon/like.png) no-repeat right center/contain;
+    height: 30px;
+    width: 30px;
+    float: right;
+    position: absolute;
+    top: 67%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.prev {
+    position: absolute;
+    top:50%; left:15%;
+    background:url(../img/icon/btn_left.png) no-repeat left center/contain;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+}
+.next {
+    position: absolute;
+    top:50%; right:15%;
+    background: url(../img/icon/btn_right.png) no-repeat right center/contain;
+    width:50%;
+    height:50px;
+    cursor:pointer;
+
+}
+/* middle content */
+.middle {
+    margin: auto;
+    width: 1200px;
+}
+
+.middle>p {
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 50px 0;
+}
+
+.middleWrap {
+    width: 100%;
+    position: relative;
+}
+
+.grid {
+    width: 100%;
+    float: left;
+}
+
+.effect-zoe {
+    float: left;
+    width: 350px;
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.effect-zoe>img {
+    width: 100%;
+    height: 100%;
+}
+
+.game_logo {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.game_logo>img {
+    width: 130px;
+}
+
+.grid>.effect-zoe:nth-child(even) {
+    margin: 0 75px;
+}
+
+.middleWrap .grid:nth-child(even) {
+    margin: 75px 0;
+}
+
+.game_txt {
+    width: 100%;
+    position: absolute;
+    background: #2a2a2a;
+    color: #fff;
+    height: 45px;
+    line-height: 40px;
+    transition: all 0.5s;
+    bottom: -50%;
+    transition: all 0.5s;
+}
+
+.effect-zoe:hover .game_txt {
+    bottom: 0;
+}
+
+.game_txt h2 {
+    float: left;
+    font-size: 14px;
+    width: 75%;
+    text-indent: 15px;
+}
+
+.game_txt p {
+    float: right;
+    display: block;
+    width: 25%;
+}
+
+/* banner */
+
+.banner {
+    width: 1200px;
+    margin: auto;
+    clear: both;
+}
+
+.bannerImg {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background: #231815;
+    position: relative;
+    transition: all 0.7s;
+    margin: 200px 100px;
+}
+
+.bannerImg:hover {
+    background: #595757;
+}
+
+.bannerImg img {
+    width: 150px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.bannerImg p {
+    color: #2a2a2a;
+    bottom: -32px;
+    position: absolute;
+    font-size: 14px;
+}
+
+
+/* footer */
+
+.footer {
+    clear: both;
+    width: 100%;
+    background: #0E151D;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.mainmenu_footer {
+    margin: auto;
+    width: 1200px;
+    border-top: 5px solid #eeeeef;
+    padding: 20px 10px;
+}
+
+.mainmenu_footer_logo {
+    width: 100px;
+    float: left;
+}
+
+.footer_txt {
+    width: 1000px;
+    float: left;
+    text-align: center;
+
+}
+
+.mainmenu_valve_links {}
+
+.mainmenu_valve_links a {
+    color: #fff;
+}
+
+.footer_logo_right {
+    width: 100px;
+    float: right;
+}
+
+.sub_footer {
+    width: 1200px;
+    margin: auto;
+    border-bottom: 5px solid #eeeeef;
+    text-align: center;
+
+}
+
+.sub_valve_links {
+    padding: 20px 0;
+    display: inline-block;
+}
+
+.sub_valve_links a {
+    color: #fff;
+}

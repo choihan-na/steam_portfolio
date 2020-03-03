@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.Verical {
+    width:1220px;
+    margin:50px auto 0;
+}
+.Verical::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+.Verical h3 {text-align: left;}
+.card_content {
+    width:244px;
+    float:left;
+    margin-right: 74px;
+    background: #121212;
+
+}
+.card_content:last-child {margin-right: 0;}
+.card_content img {width: 100%;}
+.card_meta a {
+    display:block;
+    color:#fff;
+    padding:10px 0;
+    font-size:1.6rem;  
+    text-align: center;
+}
