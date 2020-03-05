@@ -9,7 +9,6 @@ import 'css/App.css';
 function App() {
   return (
     <>
-      <Header />
       <Gnb />
       <Slider />
       <h3>스팀에 오신것을 환영합니다.</h3>

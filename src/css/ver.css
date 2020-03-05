@@ -11,13 +11,26 @@
 }
 .Verical h3 {text-align: left;}
 .Verical .card_content {
-    width:244px; height:250px;
+    width:244px;
     float:left;
     margin-right: 74px;
     background: #121212;
+    position: relative;
 }
 .Verical .card_content:last-child {margin-right: 0;}
-.Verical .card_content img {width: 100%;}
+.Verical .card_content img {width: 100%; height: 100%;}
+.Verical .card_meta {
+    position: absolute;
+    bottom:0;
+    width:100%;
+    background:#2e2e2e;
+    padding:7px 0;
+    opacity: 0.5;
+    transition-duration:0.9s;
+}
+.Verical .card_content:hover .card_meta {
+    opacity: 1;
+}
 .Verical .card_meta a {
     display:block;
     color:#fff;

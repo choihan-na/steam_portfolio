@@ -33,10 +33,10 @@ const Vericalcontent = () => {
             {vers.map(ver =>
                 <div className="card_content">
                     <div className="card_image">
-                        <img image={ver.image} />
+                        <img src={ver.image} />
                     </div>
                     <div className="card_meta">
-                        <a href="#" text={ver.text}></a>
+                        <a href="#">{ver.text}</a>
                     </div>
                 </div>
             )

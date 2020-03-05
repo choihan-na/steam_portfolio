@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'css/slider.css';
 // import 변수명 from "경로" ;
 import slider1 from "img/Slider1.jpg"
@@ -8,19 +8,25 @@ import slider1_3 from "img/Slider1_3.jpg";
 import slider1_4 from "img/Slider1_4.jpg";
 
 const Slider = () => {
+
+    const [mainImage, setMainImage] = useState(slider1);
+
+    const onMouseOver = (image) => setMainImage(image);
+    const onMouseOut = () => setMainImage(slider1);
+
     return (
         <div className="SliderWrap">
             <div className="slider">
                 <div className="view">
-                    <img src={slider1} alt="Slider1" />
+                    <img src={mainImage} alt="Slider1" />
                 </div>
                 <div className="thumb">
                     <h2>MONSTER HUNTER</h2>
                     <div className="thumbnail">
-                        <img src={slider1_1} alt="Slider1_1" />
-                        <img src={slider1_2} alt="Slider1_2" />
-                        <img src={slider1_3} alt="Slider1_3" />
-                        <img src={slider1_4} alt="Slider1_4" />
+                        <img src={slider1_1} onMouseOut={onMouseOut} onMouseOver={() => onMouseOver(slider1_1)} alt="Slider1_1" />
+                        <img src={slider1_2} onMouseOut={onMouseOut} onMouseOver={() => onMouseOver(slider1_2)} alt="Slider1_2" />
+                        <img src={slider1_3} onMouseOut={onMouseOut} onMouseOver={() => onMouseOver(slider1_3)} alt="Slider1_3" />
+                        <img src={slider1_4} onMouseOut={onMouseOut} onMouseOver={() => onMouseOver(slider1_4)} alt="Slider1_4" />
                     </div>
                     <div className="thumTxt">
                         <p>판매중</p>
