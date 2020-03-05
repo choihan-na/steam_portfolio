@@ -10,16 +10,15 @@
     clear:both;
 }
 .Verical h3 {text-align: left;}
-.card_content {
-    width:244px;
+.Verical .card_content {
+    width:244px; height:250px;
     float:left;
     margin-right: 74px;
     background: #121212;
-
 }
-.card_content:last-child {margin-right: 0;}
-.card_content img {width: 100%;}
-.card_meta a {
+.Verical .card_content:last-child {margin-right: 0;}
+.Verical .card_content img {width: 100%;}
+.Verical .card_meta a {
     display:block;
     color:#fff;
     padding:10px 0;

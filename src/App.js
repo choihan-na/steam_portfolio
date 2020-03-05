@@ -15,7 +15,7 @@ function App() {
       <h3>스팀에 오신것을 환영합니다.</h3>
       <Vericalcontent />
       <Horizontalcontent />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

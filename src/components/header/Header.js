@@ -6,8 +6,8 @@ const Header = () => {
         <header>
             <div className="global_header">
                 <h1>
-                    <a href="/">
-                        <img src={global_logo} />
+                    <a href="#">
+                        <img src={global_logo} alt="header_logo" />
                     </a>
                 </h1>
                 <ul className="global_left">

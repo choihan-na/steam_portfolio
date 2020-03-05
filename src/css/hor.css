@@ -1,6 +1,51 @@
 @charset "utf-8";
 
 .horizontal {
-    width:1220px; margin:150px auto;
+    width:1220px;
+    margin:100px auto;
+}
+.horizontal:after {
+    content:"";
+    display:block;
     clear:both;
+}
+.horizontal .card_content {
+    float:left;
+}
+.horizontal .card_content:nth-child(2) {
+   margin: 0 85px; 
+}
+.horizontal .card_image {
+    width:350px;
+    height: 180px;
+    position: relative;
+}
+.horizontal .card_image:after {
+    content:""
+}
+.horizontal .card_image > img {
+    width:100%; height: 100%;
+}
+.game_logo {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.game_logo img {width:100%;}
+.game_txt {
+    width:100%;
+    position: absolute; 
+    bottom: 0;
+    background: #2e2e2e;
+    color:#fff;
+    padding:10px 20px;
+}
+.game_txt h4 {
+    float:left;
+    font-size:1.6rem;
+}
+.won {
+    float:right;
+    font-size:1.4rem;
 }
